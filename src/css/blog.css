@@ -1,0 +1,96 @@
+/* ./css/blog.css */
+.blog-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .blog-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Adjust card width and number of columns */
+    gap: 20px;
+    justify-content: center; /* Center align grid items */
+  }
+  
+  .blog-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.5s;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Ensure card takes full height */
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+  }
+  
+  .blog-card-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio */
+    border-radius: 8px;
+  }
+  
+  .blog-card-content {
+    padding: 15px 0;
+    flex: 1;
+  }
+  
+  .blog-card-content h2 {
+    font-size: 1.2rem;
+    margin: 0 0 10px;
+    color: #333;
+  }
+  
+  .blog-card-content p {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .read-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .read-more:hover {
+    text-decoration: underline;
+  }
+  
+  .loading, .error {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+  }
+  
+  /* Responsive design */
+  @media (min-width: 576px) {
+    .blog-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row on small screens */
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .blog-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 cards per row on medium screens */
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .blog-grid {
+      grid-template-columns: repeat(4, 1fr); /* 4 cards per row on large screens */
+    }
+  }
+  
